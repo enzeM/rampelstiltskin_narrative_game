@@ -7,13 +7,13 @@ public class PlayerMovement : MonoBehaviour {
 	public int moveSpeed;
 
 	private Animator playerAnimator;
-	private Rigidbody2D playerBody;
+	//private Rigidbody2D playerBody;
 	private float hDir; 
 	private float vDir; 
 	// Use this for initialization
 	void Start () {
 		playerAnimator = GetComponent<Animator> ();
-		playerBody = GetComponent<Rigidbody2D> ();
+		//playerBody = GetComponent<Rigidbody2D> ();
 	}
 	
 	// Update is called once per frame
@@ -45,11 +45,5 @@ public class PlayerMovement : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.J)) {
 			playerAnimator.SetTrigger ("isAttacking");
 		} 
-	}
-
-	void OnCollisionEnter2D(Collision2D coll) {
-		print ("hit");
-		if (coll.gameObject.tag == "Map")
-			coll.gameObject.SendMessage("ApplyDamage", 10);
 	}
 }
