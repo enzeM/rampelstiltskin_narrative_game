@@ -5,23 +5,25 @@ using Fungus;
 
 public class Talk : MonoBehaviour {
 
-	public Flowchart dialog;
+	public static Flowchart dialogsManager;
+	public Flowchart dialogs;
 	public string content;
-	// Use this for initialization
-	void Start () {
-				
+
+	void Awake() {
+		dialogsManager = GameObject.Find ("DialogsManager").GetComponent<Flowchart> ();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+	public static bool isTalking {
+		get {
+			return dialogsManager.GetBooleanVariable ("isTalking");
+		}
 	}
+
 
 	void OnTriggerStay2D(Collider2D other) {
 		if (other.gameObject.CompareTag ("Player")) {
 			if (Input.GetKey (KeyCode.E)) {
-				Block dialogBlock = dialog.FindBlock (content);
-				dialog.ExecuteBlock (dialogBlock);
+				Block dialogsBlock = dialogs.FindBlock (content);
+				dialogs.ExecuteBlock (dialogsBlock);
 			}
 		}
 	}

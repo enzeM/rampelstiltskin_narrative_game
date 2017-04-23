@@ -18,10 +18,12 @@ public class PlayerMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		hDir = Input.GetAxisRaw ("Horizontal");
-		vDir = Input.GetAxisRaw ("Vertical");
-		HandleMovement ();	
-		HandleAttack ();
+		if (!Talk.isTalking) {
+			hDir = Input.GetAxisRaw ("Horizontal");
+			vDir = Input.GetAxisRaw ("Vertical");
+			HandleMovement ();	
+			HandleAttack ();
+		}
 	}
 
 	//move vertically or horizontally based on player's axis raw
