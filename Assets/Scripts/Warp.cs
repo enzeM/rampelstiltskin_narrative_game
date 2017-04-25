@@ -6,7 +6,9 @@ public class Warp : MonoBehaviour {
 
 	[SerializeField]
 	private Transform target;
-	void OnTriggerEnter2D (Collider2D player) {
-		player.transform.position = target.transform.position;
+	void OnTriggerEnter2D (Collider2D other) {
+		if (other.CompareTag ("Player")) {
+			other.transform.position = target.transform.position;
+		}
 	}
 }
