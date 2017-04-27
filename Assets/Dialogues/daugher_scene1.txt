@@ -1,0 +1,8 @@
+Daugher: Dad, I am scare!
+You: Trust me, I will bring you out of here!
+Daugher: I know you are trying to protect me from Sir Geogre
+You: I heard people talking about Alchemy in the cafe in the west of the town
+You: I think I should go there
+Daugher: Take care dad.
+$ chat with people in the cafe at the west of the town
+:task updated

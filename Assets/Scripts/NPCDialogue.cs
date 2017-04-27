@@ -4,24 +4,22 @@ using UnityEngine;
 
 public class NPCDialogue : MonoBehaviour {
 
-	//set character name in dialogue box
-	public string characterNameStr;
-
-	//the dialogue content
-	public TextAsset dialoguesFile;
-	public string[] dialogueStrs;
-	public string dialogue;
+	public TextAsset dialoguesFile; //raw dialogue file
+	public string[] dialogueStrs; //dialogue data structure 
 	public DialogueManager dialogueManager;
 
-	public GameObject tipText;
+	//public GameObject tipText;
 	public bool tipActive;
-
+	
 	// Use this for initialization
 	void Start () {
 		dialogueManager = FindObjectOfType<DialogueManager> ();	
 		//convert content of a dialgue file in to dialogues array
 		if (dialoguesFile != null) {
+			//dialogue strings is format of name : dialogue
 			dialogueStrs = dialoguesFile.text.Split ('\n');
+		} else { //avoid null pointer exception
+			dialogueStrs [0] = "There is nothing special here";
 		}
 	}
 	
@@ -37,8 +35,11 @@ public class NPCDialogue : MonoBehaviour {
 	void OnTriggerStay2D (Collider2D other) {
 		ManageTip (other);
 		if (other.gameObject.CompareTag ("Player")) {
-			if (Input.GetKey (KeyCode.E) && !dialogueManager.dialogueActive) {
-				dialogueManager.characterNameStr = this.characterNameStr;
+			//active a dialogue (read from the beginning) when 
+			//no other dialogue is active and the option panel is also deactive
+			if (Input.GetKey (KeyCode.E) 
+					&& !dialogueManager.dialogueActive 
+					&& !dialogueManager.optionPanelActive) {
 				dialogueManager.dialogueStrs = this.dialogueStrs;
 				dialogueManager.currentLine = 0;
 				dialogueManager.ShowDialogue ();
@@ -48,7 +49,7 @@ public class NPCDialogue : MonoBehaviour {
 
 	void OnTriggerExit2D (Collider2D other) {
 		if (other.gameObject.CompareTag ("Player")) {
-			tipText.SetActive (false);
+			dialogueManager.tipText.SetActive (false);
 		}
 	}
 
@@ -56,9 +57,9 @@ public class NPCDialogue : MonoBehaviour {
 	void ManageTip(Collider2D other) {
 		if (other.gameObject.CompareTag ("Player")) {
 			if (!tipActive && !dialogueManager.dialogueActive) {
-				tipText.SetActive (true);
+				dialogueManager.tipText.SetActive (true);
 			} else {
-				tipText.SetActive (false);
+				dialogueManager.tipText.SetActive (false);
 			}
 		}
 	}

@@ -1,0 +1,15 @@
+King: So you are the miller!
+Miller: Yes, my lord!
+King:  Your daughter can spin straw into glod?
+Miller: No, my lord, I didn’t say that …
+King: Don’t try to play me! Sir George had told me everything!
+Miller: My … my lord … please …
+King: Well, I give you a chance to prove your words!
+King: Guard! Send his daughter to the mill.
+Miller: Please my lord, I can explain …
+King: All straw in that room must be glod tomorrow!
+King: If not, I will kill all of you!
+King: I hate lier!
+King: Now you can talk to your girl, this might be my last grace to you.
+:Continue the game?
+[Option]
