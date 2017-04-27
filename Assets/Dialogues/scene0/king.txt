@@ -1,0 +1,14 @@
+King: So you are the miller!
+You: Yes, my lord!
+King: I heard your daughter know Alchemy, which able to turn the straw into gold
+You: No, my lord, it is not true
+King: Don’t try to play me! Sir George had told me everything!
+You: My ... my lord ... I can explain
+King: Well, I give you a chance to prove your words!
+King: Guard! Send his daughter to the mill.
+King: All straw in that room must be glod tomorrow!
+King: If not, I will kill all of you! I hate liers!
+You: ...
+King: Now you can talk to your girl, this might be my last grace on you.
+:Continue to the next chapter?
+[Option]

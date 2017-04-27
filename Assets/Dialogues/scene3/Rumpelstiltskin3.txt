@@ -1,0 +1,4 @@
+Elf: well, save your daughter or give me what I want! There is nothing free in this world
+Voice in mind: This Elf is not at home, It is a good chance to walk into his house and get the Alchemy Incantation
+$ Go to Elf's home and find the Alchemy Incatation
+:Task updated

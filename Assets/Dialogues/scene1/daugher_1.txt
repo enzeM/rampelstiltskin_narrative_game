@@ -1,0 +1,8 @@
+Daughter: Dad, I am scare!
+You: Trust me, I will bring you out of here!
+Daughter: I know you are trying to protect me from Sir Geogre
+You: I heard people talking about Alchemy in the cafe at the west of the town
+You: I think I should go to find something there
+Daughter: Take care dad.
+$ chat with people in the cafe at the west of the town
+:Task updated

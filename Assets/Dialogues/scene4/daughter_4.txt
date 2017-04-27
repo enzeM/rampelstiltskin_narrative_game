@@ -1,0 +1,11 @@
+You: Your majesty, may I help you ? You seem worried.
+Queen: Please don’t call me that. You are still my father even if I am a queen now.
+You: Alright, my dear. How is my grandson ?
+Queen: This is why I need to see you
+You: Huh?
+Queen: A suspicious elf showed up last night and told me that you made a commitment with him that I had to give my boy to him.
+You: He finally came after years.
+Queen: Father, I can’t give my boy to him.
+You: Don’t worry my girl. I will talk to him.
+:Task updated
+$Go to visit Elf

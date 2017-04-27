@@ -1,0 +1,9 @@
+lyrics:Merrily the feast I’ll make.
+lyrics:Today I’ll brew, tomorrow bake;
+lyrics:Merrily I’ll dance and sing,
+lyrics:For next day will a stranger bring.
+lyrics:Little does my lady dream
+lyrics:Rumpelstiltskin is my name!”
+You: his name must be Rumpelstiltikin!
+:Continue the game? Yes to the next chapter and No return to the main menu
+[Option]

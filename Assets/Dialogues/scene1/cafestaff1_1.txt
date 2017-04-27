@@ -1,0 +1,8 @@
+Staff Karen: Hi miller, Is everything all right?
+Staff Karen: I hear the king caught your daughter and ask her turn all room into gold!
+Staff Karen: People here is talking about the Alchemy, they siad that the Alchemist is living in the south forest!
+You: I dont know, but I need to save my daughter's live
+You: That is the only thing I am caring about
+Staff Karen: Watch out the bee in the forest, they are danger!
+$Find the elf in the south forest
+:Task updated

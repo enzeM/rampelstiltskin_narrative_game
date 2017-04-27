@@ -1,0 +1,5 @@
+Old John: Well I saw an elf singing in woods days ago and the lyrics intrigued me. So I wrote down the lyric on a note. 
+Old John: But I think I lost the note when I was fishing yesterday. That’s a lovely poetry!
+Voice in mind: The note must be a clue for the elf's name, I need to find it
+:Task Updated
+$Find the lost note from the pool near the castal

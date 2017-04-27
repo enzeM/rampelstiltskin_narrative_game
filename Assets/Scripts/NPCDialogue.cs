@@ -6,7 +6,7 @@ public class NPCDialogue : MonoBehaviour {
 
 	public TextAsset dialoguesFile; //raw dialogue file
 	public string[] dialogueStrs; //dialogue data structure 
-	public DialogueManager dialogueManager;
+	private DialogueManager dialogueManager;
 
 	//public GameObject tipText;
 	public bool tipActive;
@@ -18,8 +18,6 @@ public class NPCDialogue : MonoBehaviour {
 		if (dialoguesFile != null) {
 			//dialogue strings is format of name : dialogue
 			dialogueStrs = dialoguesFile.text.Split ('\n');
-		} else { //avoid null pointer exception
-			dialogueStrs [0] = "There is nothing special here";
 		}
 	}
 	

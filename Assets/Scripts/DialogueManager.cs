@@ -19,11 +19,20 @@ public class DialogueManager : MonoBehaviour {
 
 	//public Text taskText;//change task
 	public TaskMenuManager taskMenuManager;
+	private TaskObjectManager taskObjectManager;
+	private bool haveTask;
 
 	// Use this for initialization
 	void Start () {
 		dialogueActive = false;
 		optionPanelActive = false;
+		//init task object manager
+		taskObjectManager = FindObjectOfType<TaskObjectManager> ();
+		if (taskObjectManager == null) {
+			haveTask = false;
+		} else {
+			haveTask = true;
+		}
 	}
 	
 	// Update is called once per frame
@@ -52,13 +61,34 @@ public class DialogueManager : MonoBehaviour {
 				if (currentStr.Contains (":")) { 
 					this.nameText.text = currentStr.Split (':') [0];
 					this.dialogueText.text = currentStr.Split (':') [1];
-				} else if (currentStr.Equals ("[Option]")) { //active the button panel
+					//check task object and print relevant dialogue
+					//format accept dialogue > no dialogue
+				} else if (currentStr.Contains ("/")) {
+					if (haveTask) {
+						print ("have task");
+						string[] strs = currentStr.Split ('/');
+						string acceptStr = strs [0];
+						string denialStr = strs [1];
+						if (taskObjectManager.CheckTaskObject ()) {
+							print ("accept");
+							this.dialogueText.text = acceptStr;
+						} else {
+							this.dialogueText.text = denialStr;
+							//jump to the last line, ensure last line is blank for task object case
+							int lastLine = dialogueStrs.Length - 1;
+							currentLine = lastLine;
+						}
+					} else {
+						ResetDialogue (); //do nothing
+					}
+					//active the button panel
+				} else if (currentStr.Equals ("[Option]")) { 
 					optionPanelActive = true;
 					optionPanel.SetActive (true);
-				//update task format [task] $ task content
-				} else if (currentStr.Contains("$")) {
-					print("updated task");
-					this.taskMenuManager.updateTask(currentStr.Split('$')[1]);
+					//update task format [task] $ task content
+				} else if (currentStr.Contains ("$")) {
+					print ("updated task");
+					this.taskMenuManager.updateTask (currentStr.Split ('$') [1]);
 				}
 			}
 		} else {

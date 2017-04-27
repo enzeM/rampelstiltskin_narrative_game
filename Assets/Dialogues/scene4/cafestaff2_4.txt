@@ -1,0 +1,4 @@
+Staff Lily: Did you know that, the Nun saw a elf singing in the forest, that’s amazing right?
+You: Really? I think I should find the Nun to ask about this.
+:Task updated
+$Chat with the Nun

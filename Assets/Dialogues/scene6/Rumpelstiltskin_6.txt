@@ -1,0 +1,5 @@
+You: You named Rumpelstiltskin!
+Rumpelstiltskin: You know my name? You know my name! That's impossible!
+Rumpelstiltskin: Fine I will keep my promise...
+:You Win the game! Click Yes to replay and No to Quit the game
+[Option]

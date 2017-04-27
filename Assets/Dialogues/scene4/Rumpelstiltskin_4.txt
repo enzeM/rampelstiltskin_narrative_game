@@ -1,0 +1,9 @@
+You: Please let my grandson go. 
+Elf: What ? you wanna break the promise ?
+You: I’d like to exchange my life with my grandson.
+Elf: You are useless to me. Well, I will give you three days to guess my true name. 
+Elf: If your answer is correct, I will set you and your boy free. Otherwise, I will take your grandson.
+You: Well, It seems no other option for me.
+Voice in mind: I might need to ask people for help.
+:Task updated
+$Chat with people for help

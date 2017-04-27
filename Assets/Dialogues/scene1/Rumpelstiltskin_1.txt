@@ -1,0 +1,8 @@
+Elf: Well stranger, you asking me to help you and your daughter
+Elf: What can I get from you? Nothing is free
+You: My daughter have a beautiful necklace, that's her mother's remain
+Elf: I want that, anything else?
+You: My wedding ring, that's all I have.
+Elf: That's not enough, I can help you, unless you give me daughter's first child when it was born
+:Do you accept the Elf's requirements to save your daughter?
+[Option]
