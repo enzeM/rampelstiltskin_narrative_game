@@ -1,7 +1,7 @@
 Elf: You thief ! You think I am not aware of what you done ? You have to pay for this. Give me the boy!
 You: Mr Elf, please let my boy go! You can take my life.
-Elf: You are nothing to me. Fine, I will you the last chance! Guess my name within three days. I will take your boys by all means if you can’t tell me my true name.
+Elf: You are nothing to me. Fine! This is your last chance! Guess my name within three days. I will take your boys by all means if you can’t tell me my true name.
 You: OK, I promise you.
-Voice in mind: I have to find someone for help!
+Voice in mind: I have to ask someone for help!
 :Task updated
 $chat with someone for help

@@ -7,6 +7,7 @@ public class BeeController : MonoBehaviour {
 	public int moveSpeed;
 	public float timeBetweenMove;
 	public float timeToMove;
+	public int hp = 3;
 
 	private Animator beeAnimator;
 	private bool moving;
@@ -15,6 +16,7 @@ public class BeeController : MonoBehaviour {
 	private float timeToMoveCounter;
 
 	private float dietime = 2f;
+
 	private bool isDead = false;
 	// Use this for initialization
 	void Start () {
@@ -31,9 +33,7 @@ public class BeeController : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D other) {
 		if (other.CompareTag ("Sword")) {
-			moveSpeed = 0;
-			beeAnimator.SetBool ("isDead", true);
-			isDead = true;
+			HandleDamage ();
 		}
 	}
 
@@ -43,6 +43,15 @@ public class BeeController : MonoBehaviour {
 		}
 		if (dietime < 0f) {
 			gameObject.SetActive (false);
+		}
+	}
+
+	void HandleDamage() {
+		hp -= 1;
+		if (this.hp <= 0) {
+			isDead = true;
+			moveSpeed = 0;
+			beeAnimator.SetBool ("isDead", true);
 		}
 	}
 

@@ -11,7 +11,7 @@ public class DialogueManager : MonoBehaviour {
 	public GameObject optionPanel;//yes or no option panel
 
 	public string[] dialogueStrs; //strings in dialogueText
-	private string nameStr; //string in nameText
+	//private string nameStr; //string in nameText
 	public int currentLine; //current dialogue we are visiting
 	public bool dialogueActive; //dialogue box's condition
 
@@ -70,7 +70,6 @@ public class DialogueManager : MonoBehaviour {
 						string acceptStr = strs [0];
 						string denialStr = strs [1];
 						if (taskObjectManager.CheckTaskObject ()) {
-							print ("accept");
 							this.dialogueText.text = acceptStr;
 						} else {
 							this.dialogueText.text = denialStr;
@@ -83,11 +82,13 @@ public class DialogueManager : MonoBehaviour {
 					}
 					//active the button panel
 				} else if (currentStr.Equals ("[Option]")) { 
+					this.nameText.text = "Option Message:";
 					optionPanelActive = true;
 					optionPanel.SetActive (true);
 					//update task format [task] $ task content
 				} else if (currentStr.Contains ("$")) {
-					print ("updated task");
+					this.nameText.text = "Task Message:";
+					this.dialogueText.text = currentStr.Split ('$') [1];
 					this.taskMenuManager.updateTask (currentStr.Split ('$') [1]);
 				}
 			}

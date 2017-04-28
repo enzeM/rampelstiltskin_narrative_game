@@ -5,9 +5,11 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
 	public int moveSpeed;
+	public int hp;
+	public int currentHp;
 
 	private Animator playerAnimator;
-	//private Rigidbody2D playerBody;
+	private bool isDead;
 	private float hDir; 
 	private float vDir; 
 	// Use this for initialization
@@ -16,7 +18,25 @@ public class Player : MonoBehaviour {
 		set;
 	}
 	void Start () {
+		isDead = false;
 		playerAnimator = GetComponent<Animator> ();
+		hp = 10;
+		currentHp = hp;
+	}
+
+	void HandleDamage () {
+		currentHp -= 1;
+		if (currentHp <= 0) {
+			playerAnimator.SetBool ("isDead", true);
+			isDead = true;
+		}
+	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+		if (other.CompareTag ("Bee")) {
+			print ("touch");
+			HandleDamage ();
+		}
 	}
 	
 	// Update is called once per frame
@@ -29,7 +49,7 @@ public class Player : MonoBehaviour {
 
 	//move vertically or horizontally based on player's axis raw
 	void HandleMovement () {
-		if (isTalking) { //can not move when talking
+		if (isTalking || isDead) { //can not move when talking
 			playerAnimator.SetBool ("isTalking", true);
 			playerAnimator.SetBool ("isWalking", false);
 		} else {
