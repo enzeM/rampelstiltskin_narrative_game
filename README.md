@@ -10,10 +10,10 @@
 |move|[x]|[x]|
 |player attack|[x]|[x]|
 |enemy attack|[x]|[x]|
-|player die|[ ]|[ ]|
+|player die|[x]|[x]|
 |enemy die|[x]|[x]|
 |enemy die|[x]|[x]|
-|player injure|[ ]|[ ]|
+|player injure|[x]|[x]|
 |enemy injure|[ ]|[ ]|
 |search item|-|[x]|
 
@@ -34,8 +34,8 @@
     - ~~game map interaction~~
         - ~~interaction for items in map~~
         - ~~interaction between multiple maps~~
-  - item
-    - game item interaction
+  - ~~item~~
+    - ~~game item interaction~~
       - ~~key item for story line~~
       - ~~equipment item for player~~
 
@@ -50,4 +50,4 @@
 
 ### 7. ~~Assembling game components~~
 
-### 8. Debugging and building the game demo through WebGL
+### 8. ~~Debugging and building the game demo through WebGL~~
